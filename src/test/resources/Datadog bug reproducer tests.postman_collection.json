@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "589d06e1-8c58-4776-9f88-aa8d49f1aa45",
+		"name": "Datadog bug reproducer tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "demo bug request 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "gol-correlation-id",
+						"type": "text",
+						"value": "1234"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/demo/request1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"request1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "demo bug request 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "gol-correlation-id",
+						"type": "text",
+						"value": "1234"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/demo/request2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"request2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,23 @@
+quarkus:
+  application:
+    name: datadog-trace-segfault-reproducer
+  shutdown:
+    timeout: 5s
+  log:
+    category:
+      "datadog":
+        level: DEBUG
+    console:
+      format: "%d{HH:mm:ss} %-5p dd.trace_id=%X{dd.trace_id}, dd.span_id=%X{dd.span_id}, sampled=%X{sampled} [%c{2.}] (%t) %s%e%n"
+  http:
+    cors: true
+  swagger-ui:
+    always-include: true
+  jaeger:
+    enabled: false
+
+
+mp:
+  opentracing:
+    server:
+      operation-name-provider: http-path
