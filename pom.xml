@@ -68,6 +68,11 @@
 			    <artifactId>dd-trace-ot</artifactId>
 			    <version>${datadog.tracer-ot.version}</version>
 			</dependency>
+                        <dependency>
+                            <groupId>org.graalvm.nativeimage</groupId>
+                            <artifactId>svm</artifactId>
+                            <version>21.0.0</version>
+                        </dependency>
 		</dependencies>
 	</dependencyManagement>
 	
@@ -136,6 +141,12 @@
 		    <groupId>com.fasterxml.jackson.module</groupId>
 		    <artifactId>jackson-module-parameter-names</artifactId>
 		</dependency>
+
+
+            <dependency>
+              <groupId>org.graalvm.nativeimage</groupId>
+              <artifactId>svm</artifactId>
+            </dependency>
 	    
 	    
 	    <!-- Test dependencies -->
